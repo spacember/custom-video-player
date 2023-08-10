@@ -123,3 +123,16 @@ video.addEventListener(
   },
   false
 );
+
+
+// intersection observer
+if (!!window.IntersectionObserver) {
+  let observer = new IntersectionObserver(
+    ([elem]) => {
+      elem.isIntersecting ? video.play() : video.pause();
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(video);
+}
