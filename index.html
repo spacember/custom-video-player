@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video player</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <figure id="videoContainer">
+      <video
+        id="video"
+        preload="metadata"
+        poster="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/250px-Shaqi_jrvej.jpg"
+      >
+        <source
+          src="https://videos.ctfassets.net/9wtva4vhlgxb/1BTwGoxZj5nBxb2nd5iwwI/f59fb79879af712030e34d1ac86122de/720p.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <ul id="video-controls" class="controls">
+        <li class="progress">
+          <progress id="progress" value="0" min="0"></progress>
+        </li>
+        <li><button id="playpause" type="button">Play/Pause</button></li>
+        <li><button id="mute" type="button">Mute/Unmute</button></li>
+        <li><button id="volinc" type="button">Vol+</button></li>
+        <li><button id="voldec" type="button">Vol-</button></li>
+        <li><button id="fs" type="button">Fullscreen</button></li>
+      </ul>
+    </figure>
+  </body>
+</html>
